@@ -1,0 +1,9 @@
+[submodule "submission-service"]
+	path = submission-service
+	url = https://github.com/syedshubairr/Submission-Service
+[submodule "task-service"]
+	path = task-service
+	url = https://github.com/syedshubairr/Task-Service
+[submodule "task-user-service"]
+	path = task-user-service
+	url = https://github.com/syedshubairr/Task-User-Service
