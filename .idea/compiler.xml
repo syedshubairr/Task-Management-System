@@ -8,9 +8,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Task-User-Service" />
-        <module name="task-service" />
         <module name="Submission-Service" />
-        <module name="eureka-server" />
+        <module name="task-service" />
       </profile>
     </annotationProcessing>
   </component>
@@ -18,7 +17,6 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Submission-Service" options="-parameters" />
       <module name="Task-User-Service" options="-parameters" />
-      <module name="eureka-server" options="-parameters" />
       <module name="task-service" options="-parameters" />
     </option>
   </component>
