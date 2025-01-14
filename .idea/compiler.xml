@@ -7,16 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="TMS-Gateway" />
         <module name="Task-User-Service" />
-        <module name="Submission-Service" />
         <module name="task-service" />
+        <module name="Submission-Service" />
+        <module name="eureka-server" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Submission-Service" options="-parameters" />
+      <module name="TMS-Gateway" options="-parameters" />
       <module name="Task-User-Service" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
       <module name="task-service" options="-parameters" />
     </option>
   </component>
