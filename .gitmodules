@@ -2,3 +2,6 @@
 [submodule "Eureka-Server"]
 	path = Eureka-Server
 	url = https://github.com/syedshubairr/eureka-server
+[submodule "TMS-Gateway"]
+	path = TMS-Gateway
+	url = https://github.com/syedshubairr/TMS-Gateway
