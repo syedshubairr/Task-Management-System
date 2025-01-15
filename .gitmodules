@@ -1,1 +1,4 @@
-[submodule "submission-service"]	path = submission-service	url = https://github.com/syedshubairr/Submission-Service[submodule "task-service"]	path = task-service	url = https://github.com/syedshubairr/Task-Service[submodule "Task-User-Service"]	path = Task-User-Service	url = https://github.com/syedshubairr/Task-User-Service[submodule "Eureka-Server"]	path = Eureka-Server	url = https://github.com/syedshubairr/eureka-server
+[submodule "submission-service"]	path = submission-service	url = https://github.com/syedshubairr/Submission-Service[submodule "task-service"]	path = task-service	url = https://github.com/syedshubairr/Task-Service[submodule "Task-User-Service"]	path = Task-User-Service	url = https://github.com/syedshubairr/Task-User-Service[submodule "Eureka-Server"]	path = Eureka-Server	url = https://github.com/syedshubairr/eureka-server
+[submodule "TMS-Gateway"]
+	path = TMS-Gateway
+	url = https://github.com/syedshubairr/TMS-Gateway
