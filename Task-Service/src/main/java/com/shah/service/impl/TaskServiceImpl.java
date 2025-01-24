@@ -41,7 +41,7 @@ public class TaskServiceImpl implements TaskService {
     public List<Task> getAllTasks(TaskStatus status) {
         List<Task> allTask = taskRepository.findAll();
         return allTask.stream().filter(
-                task -> status == null || task.getStatus().name().equalsIgnoreCase(status.toString())
+                task -> status == null || task.getStatus().getValue().equalsIgnoreCase(status.getValue())
         ).toList();
     }
 

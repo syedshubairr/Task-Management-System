@@ -5,6 +5,13 @@ public enum TaskStatus {
     ASSIGNED("ASSIGNED"),
     DONE("DONE");
 
-    TaskStatus(String assigned) {
+    private final String value;
+
+    TaskStatus(String value) {
+        this.value = value;
+    }
+
+    public String getValue() {
+        return value;
     }
 }
