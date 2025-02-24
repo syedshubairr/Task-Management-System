@@ -2,6 +2,7 @@ package com.shah.submission_service.controller;
 
 import com.shah.submission_service.dto.UserDto;
 import com.shah.submission_service.model.Submission;
+import com.shah.submission_service.model.SubmissionStatus;
 import com.shah.submission_service.service.SubmissionService;
 import com.shah.submission_service.service.TaskService;
 import com.shah.submission_service.service.UserService;
@@ -56,7 +57,7 @@ public class SubmissionController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Submission> acceptOrDeclineSubmission(@PathVariable Long id,
-                                                                @RequestParam("status") String status,
+                                                                @RequestParam("status") SubmissionStatus status,
                                                                 @RequestHeader("Authorization") String jwt) throws Exception {
         UserDto user = userService.getUserProfile(jwt);
         Submission submission = submissionService.acceptDeclineSubmission(id, status);

@@ -23,6 +23,6 @@ public class Submission {
     private Long taskId;
     private String githubLink;
     private Long userId;
-    private String status = "PENDING";
+    private SubmissionStatus status;
     private LocalDateTime submissionTime;
 }

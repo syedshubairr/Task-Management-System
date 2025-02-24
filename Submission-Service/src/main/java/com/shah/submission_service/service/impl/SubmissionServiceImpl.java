@@ -1,8 +1,8 @@
 package com.shah.submission_service.service.impl;
 
 import com.shah.submission_service.dto.TaskDto;
-import com.shah.submission_service.dto.TaskStatus;
 import com.shah.submission_service.model.Submission;
+import com.shah.submission_service.model.SubmissionStatus;
 import com.shah.submission_service.repository.SubmissionRepository;
 import com.shah.submission_service.service.SubmissionService;
 import com.shah.submission_service.service.TaskService;
@@ -26,7 +26,7 @@ public class SubmissionServiceImpl implements SubmissionService {
             Submission submission = Submission.builder()
                     .taskId(taskId)
                     .userId(userId)
-                    .status(TaskStatus.PENDING.toString())
+                    .status(SubmissionStatus.DONE)
                     .githubLink(githubLink)
                     .submissionTime(LocalDateTime.now())
                     .build();
@@ -52,10 +52,10 @@ public class SubmissionServiceImpl implements SubmissionService {
     }
 
     @Override
-    public Submission acceptDeclineSubmission(Long id, String status) throws Exception {
+    public Submission acceptDeclineSubmission(Long id, SubmissionStatus status) throws Exception {
         Submission submission = getTaskSubmissionById(id);
         submission.setStatus(status);
-        if (status.equalsIgnoreCase("ACCEPT")) {
+        if (status.equals(SubmissionStatus.DONE)) {
             taskService.completeTask(submission.getTaskId());
         }
         return submissionRepository.save(submission);
