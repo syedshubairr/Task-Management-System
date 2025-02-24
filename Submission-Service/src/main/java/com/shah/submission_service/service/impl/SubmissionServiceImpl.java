@@ -1,6 +1,7 @@
 package com.shah.submission_service.service.impl;
 
 import com.shah.submission_service.dto.TaskDto;
+import com.shah.submission_service.dto.TaskStatus;
 import com.shah.submission_service.model.Submission;
 import com.shah.submission_service.repository.SubmissionRepository;
 import com.shah.submission_service.service.SubmissionService;
@@ -25,6 +26,7 @@ public class SubmissionServiceImpl implements SubmissionService {
             Submission submission = Submission.builder()
                     .taskId(taskId)
                     .userId(userId)
+                    .status(TaskStatus.PENDING.toString())
                     .githubLink(githubLink)
                     .submissionTime(LocalDateTime.now())
                     .build();
