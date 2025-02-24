@@ -96,7 +96,7 @@ public class TaskServiceImpl implements TaskService {
     public Task assignedToUser(Long userId, Long taskId) throws Exception {
         Task task = getTaskById(taskId);
         task.setAssignedUserId(userId);
-        task.setStatus(TaskStatus.DONE);
+        task.setStatus(TaskStatus.ASSIGNED);
         return taskRepository.save(task);
     }
 
